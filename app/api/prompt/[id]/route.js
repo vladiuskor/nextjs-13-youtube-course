@@ -22,7 +22,7 @@ export const GET = async (request, {params}) => {
 }
 
 export const PATCH = async (request, {params}) => {
-    const {prompt, tag} = request.json();
+    const {prompt, tag} = await request.json();
 
     try {
         await connectToDB();
